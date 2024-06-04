@@ -3,7 +3,7 @@ const express = require('express')
 // const bodyParser = require('body-parser')
 
 // Importar las rutas
-const router = require('./router.js')
+const { router, tipos } = require('./router.js')
 
 // Crear la aplicación
 const app = express()
@@ -28,7 +28,9 @@ app.use(express.static('public'))
 app.use(router)
 
 // Definir que hacer en caso de error
-
+app.use((req,res) => {
+    res.status(404).render('error', { tipos })
+})
 
 
 // Poner el servidor en escucha

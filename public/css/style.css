@@ -47,7 +47,19 @@ footer {
     padding: 1rem;
     background-color: darkblue;
     color: white;
-    position: absolute;
+    position: sticky;
     bottom: 0;
     width: 100%;
+}
+
+.coche {
+    background-color: aquamarine;
+}
+
+.moto {
+    background-color: darkcyan;
+}
+
+.furgoneta {
+ background-color: darksalmon;
 }
